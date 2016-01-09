@@ -26,7 +26,7 @@ public class RobotMap {
 	public final int cstick = 0;
 	
 	// PWM
-	public final int leftmotorpin = 0;
+	public final int leftmotorpin = 8;
 	public final int rightmotorpin = 1;
 	
 	public final int vacuumpin = 2;
