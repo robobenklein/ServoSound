@@ -7,8 +7,10 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team3966.robot.commands.MotorControl;
 import org.usfirst.frc.team3966.robot.commands.PnueControl;
+import org.usfirst.frc.team3966.robot.commands.Speak;
 import org.usfirst.frc.team3966.robot.subsystems.CANTalons;
 import org.usfirst.frc.team3966.robot.subsystems.Pnue;
+import org.usfirst.frc.team3966.robot.subsystems.Spkr;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -21,10 +23,12 @@ public class Robot extends IterativeRobot {
 
 	public static final CANTalons motors = new CANTalons();
 	public static final Pnue pnue = new Pnue();
+	public static final Spkr speaker = new Spkr();
 	public static OI oi;
 
     Command teleopCommand;
     Command pnueCommand;
+    Command speakCommand;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -35,6 +39,7 @@ public class Robot extends IterativeRobot {
         // instantiate the command used for the autonomous period
         teleopCommand = new MotorControl();
         pnueCommand = new PnueControl();
+        speakCommand = new Speak();
     }
 	
 	public void disabledPeriodic() {
@@ -61,6 +66,7 @@ public class Robot extends IterativeRobot {
         //if (autonomousCommand != null) autonomousCommand.cancel();
       if (teleopCommand != null) teleopCommand.start();
       if (pnueCommand != null) pnueCommand.start();
+      if (speakCommand != null) speakCommand.start();
     }
 
     /**

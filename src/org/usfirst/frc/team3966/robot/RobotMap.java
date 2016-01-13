@@ -24,8 +24,10 @@ public class RobotMap {
   public final int rstick = 0;
   public final int lstick = 1;
   public final int fstick = 2;
-  
   public final int cstick = 0;
+  
+  // Speaker
+  public final int speakerpin = 9;
   
     // If you are using multiple modules, make sure to define both the port
     // number and the module. For example you with a rangefinder:
