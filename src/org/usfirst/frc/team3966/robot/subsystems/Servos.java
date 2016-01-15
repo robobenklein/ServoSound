@@ -17,13 +17,11 @@ public class Servos extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  // Speaker
-  private PWM speaker = new PWM(robotMap.speakerpin);
-  private Servo speaker2 = new Servo(robotMap.servoPin);
+  // PWM Devices
+  private Servo savoxServo = new Servo(robotMap.servoPin);
   
-  public void speak(double pitch) {
-    speaker.setPosition(pitch);
-    speaker2.set(pitch);
+  public void set(double pitch) {
+    savoxServo.set(pitch);
   }
   
   public void initDefaultCommand() {

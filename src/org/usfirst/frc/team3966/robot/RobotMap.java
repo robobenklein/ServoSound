@@ -27,7 +27,6 @@ public class RobotMap {
   public final int cstick = 0;
   
   // PWM Ports
-  public final int speakerpin = 0;
   public final int servoPin = 4;
   
     // If you are using multiple modules, make sure to define both the port

@@ -21,7 +21,7 @@ public class ServoControl extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-      Robot.speaker.speak(Robot.oi.controller.getRawAxis(3));
+      Robot.speaker.set(Robot.oi.controller.getRawAxis(3));
     }
 
     // Make this return true when this Command no longer needs to run execute()
