@@ -3,7 +3,6 @@ package org.usfirst.frc.team3966.robot.subsystems;
 
 import org.usfirst.frc.team3966.robot.RobotMap;
 
-import edu.wpi.first.wpilibj.PWM;
 import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.command.Subsystem;
 

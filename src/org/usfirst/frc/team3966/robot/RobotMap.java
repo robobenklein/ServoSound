@@ -12,14 +12,14 @@ public class RobotMap {
     // public static int rightMotor = 2;
   
   // Pnuematics Pistons [l]arge and [s]mall, [i]n and [o]ut.
-  public static int pn_lo = 3;
-  public static int pn_li = 2;
-  public static int pn_so = 1;
-  public static int pn_si = 0;
+  public final int pn_lo = 3;
+  public final int pn_li = 2;
+  public final int pn_so = 1;
+  public final int pn_si = 0;
   
   // CANTalon Motors
-  public static int talonZ = 8;
-  public static int talonY = 9;
+  public final int talonZ = 8;
+  public final int talonY = 9;
   
   public final int rstick = 0;
   public final int lstick = 1;

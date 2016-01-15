@@ -12,7 +12,7 @@ public class ServoControl extends Command {
 
     public ServoControl() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.speaker);
+        requires(Robot.servos);
     }
 
     // Called just before this Command runs the first time
@@ -21,7 +21,7 @@ public class ServoControl extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-      Robot.speaker.set(Robot.oi.controller.getRawAxis(3));
+      Robot.servos.set(Math.abs(Robot.oi.controller.getRawAxis(3) + 1.0) / 2.0);
     }
 
     // Make this return true when this Command no longer needs to run execute()

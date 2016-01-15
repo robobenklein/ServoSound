@@ -24,12 +24,12 @@ public class Robot extends IterativeRobot {
 
 	public static final CANTalons motors = new CANTalons();
 	public static final Pnue pnue = new Pnue();
-	public static final Servos speaker = new Servos();
+	public static final Servos servos = new Servos();
 	public static OI oi;
 
     Command teleopCommand;
     Command pnueCommand;
-    Command speakCommand;
+    Command servoCommand;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -40,7 +40,7 @@ public class Robot extends IterativeRobot {
         // instantiate the command used for the autonomous period
         teleopCommand = new MotorControl();
         pnueCommand = new PnueControl();
-        speakCommand = new ServoControl();
+        servoCommand = new ServoControl();
     }
 	
 	public void disabledPeriodic() {
@@ -67,7 +67,7 @@ public class Robot extends IterativeRobot {
         //if (autonomousCommand != null) autonomousCommand.cancel();
       if (teleopCommand != null) teleopCommand.start();
       if (pnueCommand != null) pnueCommand.start();
-      if (speakCommand != null) speakCommand.start();
+      if (servoCommand != null) servoCommand.start();
     }
 
     /**
