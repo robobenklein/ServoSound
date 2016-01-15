@@ -1,16 +1,17 @@
 
 package org.usfirst.frc.team3966.robot;
 
-import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team3966.robot.commands.MotorControl;
 import org.usfirst.frc.team3966.robot.commands.PnueControl;
 import org.usfirst.frc.team3966.robot.commands.Speak;
 import org.usfirst.frc.team3966.robot.subsystems.CANTalons;
 import org.usfirst.frc.team3966.robot.subsystems.Pnue;
 import org.usfirst.frc.team3966.robot.subsystems.Spkr;
+
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 /**
  * The VM is configured to automatically run this class, and to call the

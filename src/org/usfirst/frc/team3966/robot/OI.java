@@ -1,10 +1,8 @@
 package org.usfirst.frc.team3966.robot;
 
-import edu.wpi.first.wpilibj.Joystick;
-
-import org.usfirst.frc.team3966.robot.RobotMap;
-import org.usfirst.frc.team3966.robot.commands.MotorControl;
 import org.usfirst.frc.team3966.util.XboxController;
+
+import edu.wpi.first.wpilibj.Joystick;
 
 /**
  * This class is the glue that binds the controls on the physical operator

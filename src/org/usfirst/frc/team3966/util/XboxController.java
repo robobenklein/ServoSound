@@ -1,6 +1,6 @@
 package org.usfirst.frc.team3966.util;
 
-import edu.wpi.first.wpilibj.*;
+import edu.wpi.first.wpilibj.Joystick;
 
 /**
  * A program for Xbox controller inputs

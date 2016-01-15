@@ -1,9 +1,9 @@
 
 package org.usfirst.frc.team3966.robot.commands;
 
-import edu.wpi.first.wpilibj.command.Command;
-
 import org.usfirst.frc.team3966.robot.Robot;
+
+import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
@@ -21,7 +21,7 @@ public class MotorControl extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-      Robot.motors.setYmotor(Robot.oi.controller.getRawAxis(0));
+      Robot.motors.setYmotor(Robot.oi.controller.getRawAxis(5));
       Robot.motors.setZmotor(Robot.oi.controller.getRawAxis(1));
     }
 
