@@ -8,9 +8,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Speak extends Command {
+public class ServoControl extends Command {
 
-    public Speak() {
+    public ServoControl() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.speaker);
     }

@@ -3,10 +3,10 @@ package org.usfirst.frc.team3966.robot;
 
 import org.usfirst.frc.team3966.robot.commands.MotorControl;
 import org.usfirst.frc.team3966.robot.commands.PnueControl;
-import org.usfirst.frc.team3966.robot.commands.Speak;
+import org.usfirst.frc.team3966.robot.commands.ServoControl;
 import org.usfirst.frc.team3966.robot.subsystems.CANTalons;
 import org.usfirst.frc.team3966.robot.subsystems.Pnue;
-import org.usfirst.frc.team3966.robot.subsystems.Spkr;
+import org.usfirst.frc.team3966.robot.subsystems.Servos;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -24,7 +24,7 @@ public class Robot extends IterativeRobot {
 
 	public static final CANTalons motors = new CANTalons();
 	public static final Pnue pnue = new Pnue();
-	public static final Spkr speaker = new Spkr();
+	public static final Servos speaker = new Servos();
 	public static OI oi;
 
     Command teleopCommand;
@@ -40,7 +40,7 @@ public class Robot extends IterativeRobot {
         // instantiate the command used for the autonomous period
         teleopCommand = new MotorControl();
         pnueCommand = new PnueControl();
-        speakCommand = new Speak();
+        speakCommand = new ServoControl();
     }
 	
 	public void disabledPeriodic() {

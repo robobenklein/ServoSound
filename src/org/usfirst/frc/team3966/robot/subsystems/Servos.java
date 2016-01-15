@@ -4,12 +4,13 @@ package org.usfirst.frc.team3966.robot.subsystems;
 import org.usfirst.frc.team3966.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.PWM;
+import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  *
  */
-public class Spkr extends Subsystem {
+public class Servos extends Subsystem {
   
   private static RobotMap robotMap = new RobotMap();
   
@@ -18,11 +19,11 @@ public class Spkr extends Subsystem {
 
   // Speaker
   private PWM speaker = new PWM(robotMap.speakerpin);
-  private PWM speaker2 = new PWM(1);
+  private Servo speaker2 = new Servo(robotMap.servoPin);
   
   public void speak(double pitch) {
     speaker.setPosition(pitch);
-    speaker2.setPosition(pitch);
+    speaker2.set(pitch);
   }
   
   public void initDefaultCommand() {
