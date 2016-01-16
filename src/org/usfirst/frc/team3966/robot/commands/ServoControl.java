@@ -21,7 +21,9 @@ public class ServoControl extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-      Robot.servos.setAll(Math.abs(Robot.oi.controller.getRawAxis(3) + 1.0) / 2.0);
+      Robot.servos.setOdd(Math.abs(Robot.oi.controller.getRawAxis(3) + 1.0) / 2.0);
+      Robot.servos.setEven(Math.abs(Robot.oi.controller.getRawAxis(4) + 1.0) / 2.0);
+      //Robot.servos.setAll(0);
     }
 
     // Make this return true when this Command no longer needs to run execute()

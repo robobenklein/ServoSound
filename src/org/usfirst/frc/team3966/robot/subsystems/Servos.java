@@ -28,7 +28,7 @@ public class Servos extends Subsystem {
   Servo Servo8x = new Servo(8);
   Servo Servo9x = new Servo(9);
   
-  public void setAll(double pitch) {
+  public void go(double pitch) {
     Servo0x.set(pitch);
     Servo1x.set(pitch);
     Servo2x.set(pitch);
@@ -39,6 +39,22 @@ public class Servos extends Subsystem {
     Servo7x.set(pitch);
     Servo8x.set(pitch);
     Servo9x.set(pitch);
+  }
+  
+  public void setOdd(double pitch) {
+    Servo1x.set(pitch);
+    Servo3x.set(pitch);
+    Servo5x.set(pitch);
+    Servo7x.set(pitch);
+    Servo9x.set(pitch);
+  }
+  
+  public void setEven(double pitch) {
+    Servo0x.set(pitch);
+    Servo2x.set(pitch);
+    Servo4x.set(pitch);
+    Servo6x.set(pitch);
+    Servo8x.set(pitch);
   }
   
   public void initDefaultCommand() {

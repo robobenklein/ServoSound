@@ -65,8 +65,8 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         //if (autonomousCommand != null) autonomousCommand.cancel();
-      if (teleopCommand != null) teleopCommand.start();
-      if (pnueCommand != null) pnueCommand.start();
+      //if (teleopCommand != null) teleopCommand.start();
+      //if (pnueCommand != null) pnueCommand.start();
       if (servoCommand != null) servoCommand.start();
     }
 
